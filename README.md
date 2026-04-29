@@ -1,3 +1,4 @@
+
 # SAMS — Payment Risk Prediction Model
 ### Student Accommodation Management System · ML Project Guide
 
@@ -35,6 +36,7 @@ sams_ml/
 
 5.  **Access payment risk:** Click the final run/submit button. 
 <img width="944" height="428" alt="Capture3" src="https://github.com/user-attachments/assets/1c04e8bb-2f77-4493-9704-e108a745b996" />
+<img width="931" height="431" alt="Captur4" src="https://github.com/user-attachments/assets/bc5e99c7-2f17-4795-8cd4-9da4d7bd43d4" />
 <img width="944" height="431" alt="Capture4" src="https://github.com/user-attachments/assets/8a29a82d-50d9-4cf5-b03b-bdaee8b40c33" />
 
 ---
