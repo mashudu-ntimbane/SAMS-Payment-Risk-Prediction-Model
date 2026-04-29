@@ -27,7 +27,8 @@ sams_ml/
 
 # Payment Risk Machine Learning Model
 ## Overview
-![Model Structure](Payment Risk ML/model/Capture.PNG)
+<img width="349" height="328" alt="Capture" src="https://github.com/user-attachments/assets/b907adeb-5b16-42b8-b44f-40b83862c122" />
+
 
 ---
 
