@@ -27,8 +27,13 @@ sams_ml/
 
 # Payment Risk Machine Learning Model
 ## Overview
+1.  **Open the Model:**
 <img width="942" height="432" alt="Capture" src="https://github.com/user-attachments/assets/953a0fc9-98bc-4314-87e0-67e113b01e79" />
-<img width="940" height="427" alt="Capture2" src="https://github.com/user-attachments/assets/abf03cbe-1b6d-4a97-98d9-8bab040aa02a" />
+
+2.  **Choose the required payment information:** Provide the required input data.
+ img width="940" height="427" alt="Capture2" src="https://github.com/user-attachments/assets/abf03cbe-1b6d-4a97-98d9-8bab040aa02a" />
+
+5.  **Access payment risk:** Click the final run/submit button. 
 <img width="944" height="428" alt="Capture3" src="https://github.com/user-attachments/assets/1c04e8bb-2f77-4493-9704-e108a745b996" />
 <img width="944" height="431" alt="Capture4" src="https://github.com/user-attachments/assets/8a29a82d-50d9-4cf5-b03b-bdaee8b40c33" />
 
