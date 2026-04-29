@@ -25,11 +25,9 @@ sams_ml/
 └── README.md
 ```
 
-### Prediction model
-
-| Overview |
-|---|
-| ![Model](model/Capture.PNG) |
+# Payment Risk Machine Learning Model
+## Overview
+![Model Structure](Payment Risk ML/model/Capture.PNG)
 
 ---
 
