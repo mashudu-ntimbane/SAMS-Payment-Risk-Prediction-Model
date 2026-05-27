@@ -1,6 +1,6 @@
 
 # SAMS — Payment Risk Prediction Model
-### Student Accommodation Management System (SAMS) · ML Project Guide
+Supervised ML system that predicts whether a student will delay or default on accommodation payments. Built with Python, scikit-learn, and XGBoost. Deployable via Flask REST API.
 
 ---
 
@@ -42,11 +42,11 @@ sams_ml/
 ### Confusion Matrix 
 <img width="2486" height="735" alt="confusion_matrices" src="https://github.com/user-attachments/assets/4417b0ec-870b-4890-a782-5f5c6bd99f78" />
 
-### EDA correlation
+### Exploratory Data Analysis(EDA) correlation
 
 <img width="1430" height="1174" alt="eda_correlation" src="https://github.com/user-attachments/assets/b10a0ad0-f155-47f0-a032-6a10febc8ba2" />
 
-### EDA distributions
+### Exploratory Data Analysis(EDA) distributions
 
 <img width="2673" height="1471" alt="eda_distributions" src="https://github.com/user-attachments/assets/657a9f0f-c327-4ce5-8495-728a3e623ee9" />
 
