@@ -39,75 +39,7 @@ sams_ml/
 <img width="931" height="431" alt="Captur4" src="https://github.com/user-attachments/assets/bc5e99c7-2f17-4795-8cd4-9da4d7bd43d4" />
 <img width="944" height="431" alt="Capture4" src="https://github.com/user-attachments/assets/8a29a82d-50d9-4cf5-b03b-bdaee8b40c33" />
 
----
-
-## 🚀 Step-by-Step Guide
-
-### STEP 1 — Run the Google Colab Notebook
-
-1. Open [Google Colab](https://colab.research.google.com)
-2. Upload `colab/SAMS_Payment_Risk_Prediction.py`
-3. Or paste sections one-by-one into cells
-4. Run all sections top-to-bottom
-5. Download the generated `.pkl` files from the Colab file browser
-
-**What Colab generates:**
-| File | Description |
-|------|-------------|
-| `sams_dataset.csv` | 1,000-row synthetic dataset |
-| `sams_xgb_model.pkl` | Best model (XGBoost, tuned) |
-| `sams_rf_model.pkl` | Random Forest model |
-| `sams_lr_model.pkl` | Logistic Regression model |
-| `sams_scaler.pkl` | StandardScaler |
-| `sams_le_accommodation.pkl` | Label encoder |
-| `sams_le_trend.pkl` | Label encoder |
-| `training_logs.json` | All metrics & CV results |
-| `eda_distributions.png` | EDA plots |
-| `eda_correlation.png` | Correlation heatmap |
-| `confusion_matrices.png` | Confusion matrices |
-| `roc_curves.png` | ROC curves |
-| `model_comparison.png` | Performance comparison |
-| `feature_importance.png` | Feature importances |
-
----
-
-### STEP 2 — Set Up the Flask API
-
-```bash
-# Create and activate a virtual environment (recommended)
-python -m venv venv
-source venv/bin/activate        # Windows: venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Copy your .pkl files into web/models/
-mkdir web/models
-cp sams_*.pkl web/models/
-cp training_logs.json web/models/
-
-# Start the API server
-cd web
-python app.py
-```
-
-Server runs at **http://localhost:5000**
-
----
-
-### STEP 3 — Open the Frontend
-
-1. Open `web/static/index.html` in a browser
-2. Or visit **http://localhost:5000** (Flask serves it automatically)
-3. Enter student details and click **Assess Payment Risk**
-
-> **Demo mode:** The frontend works without Flask running.
-> It uses a local heuristic so you can test the UI immediately.
-> To use the real ML model, set `DEMO_MODE = false` in `index.html`
-> and start the Flask server.
-
----
-
+-- 
 ## 🔌 API Reference
 
 ### POST /api/predict
