@@ -25,6 +25,37 @@ sams_ml/
 ├── requirements.txt
 └── README.md
 ```
+## Results and Visualizations
+
+### Model Performance Comparison
+
+
+<img width="1923" height="873" alt="model_comparison" src="https://github.com/user-attachments/assets/a43f07b3-df2c-4025-a721-24a8f5dc7ae2" />
+
+
+### ROC Curve
+
+
+<img width="1323" height="1023" alt="roc_curves" src="https://github.com/user-attachments/assets/8c23a66f-1c56-4aed-8acd-34aa15dbaa95" />
+
+
+### Confusion Matrix 
+<img width="2486" height="735" alt="confusion_matrices" src="https://github.com/user-attachments/assets/4417b0ec-870b-4890-a782-5f5c6bd99f78" />
+
+### EDA correlation
+
+<img width="1430" height="1174" alt="eda_correlation" src="https://github.com/user-attachments/assets/b10a0ad0-f155-47f0-a032-6a10febc8ba2" />
+
+### EDA distributions
+
+<img width="2673" height="1471" alt="eda_distributions" src="https://github.com/user-attachments/assets/657a9f0f-c327-4ce5-8495-728a3e623ee9" />
+
+### Feature importance
+
+<img width="2373" height="882" alt="feature_importance" src="https://github.com/user-attachments/assets/0caf92fa-2fa1-436e-a361-c3b5f6188570" />
+
+
+---
 
 # Payment Risk Machine Learning Model
 ## Overview
@@ -39,7 +70,6 @@ sams_ml/
 <img width="931" height="431" alt="Captur4" src="https://github.com/user-attachments/assets/bc5e99c7-2f17-4795-8cd4-9da4d7bd43d4" />
 <img width="944" height="431" alt="Capture4" src="https://github.com/user-attachments/assets/8a29a82d-50d9-4cf5-b03b-bdaee8b40c33" />
 
--- 
 ## 🔌 API Reference
 
 ### POST /api/predict
@@ -114,32 +144,5 @@ Returns model metadata and training logs.
 5. **Single room** students face higher risk due to higher costs
 
 ---
-
-## 💡 Tips for Google Colab
-
-```python
-# Download all outputs at once
-from google.colab import files
-import os, zipfile
-
-# Zip all outputs
-with zipfile.ZipFile('sams_outputs.zip', 'w') as zf:
-    for f in os.listdir('.'):
-        if f.endswith(('.pkl', '.csv', '.json', '.png')):
-            zf.write(f)
-
-files.download('sams_outputs.zip')
-```
-
----
-
-## 🚀 Next Improvements
-
-- [ ] Add SHAP values for per-student explanations
-- [ ] Build a student-facing dashboard (historical trend charts)
-- [ ] Connect to a real PostgreSQL/MySQL database
-- [ ] Add authentication to the API
-- [ ] Deploy to Heroku, Railway, or AWS Elastic Beanstalk
-- [ ] Schedule monthly model retraining
 
 
