@@ -1,20 +1,3 @@
-# ============================================================
-# SAMS - Student Accommodation Management System
-# Payment Risk Prediction Model
-# Google Colab Notebook
-# ============================================================
-# Run each section sequentially in Google Colab.
-# Install required packages first if not already installed.
-# ============================================================
-
-# ----------------------------------------------------------
-# SECTION 0: INSTALL DEPENDENCIES
-# ----------------------------------------------------------
-# !pip install xgboost scikit-learn pandas numpy matplotlib seaborn joblib flask -q
-
-# ============================================================
-# SECTION 1: IMPORT LIBRARIES
-# ============================================================
 
 import numpy as np
 import pandas as pd
@@ -48,19 +31,6 @@ warnings.filterwarnings('ignore')
 plt.rcParams['figure.figsize'] = (10, 6)
 plt.rcParams['font.size'] = 12
 sns.set_theme(style="whitegrid", palette="muted")
-
-print("=" * 60)
-print("  SAMS Payment Risk Prediction — Libraries Loaded ✓")
-print("=" * 60)
-
-
-# ============================================================
-# SECTION 2: SYNTHETIC DATASET GENERATION
-# ============================================================
-# We generate 1000 realistic student records.
-# Each feature is drawn from distributions that reflect
-# real-world student payment behaviour.
-# ============================================================
 
 def generate_sams_dataset(n_samples: int = 1000, random_state: int = 42) -> pd.DataFrame:
     """
@@ -187,12 +157,8 @@ print(df.head())
 
 # Save raw dataset
 df.to_csv('sams_dataset.csv', index=False)
-print("\n✓ Dataset saved → sams_dataset.csv")
+print("\n Dataset saved → sams_dataset.csv")
 
-
-# ============================================================
-# SECTION 3: DATA PREPROCESSING
-# ============================================================
 
 print("\n" + "=" * 60)
 print("  SECTION 3: DATA PREPROCESSING")
@@ -247,10 +213,6 @@ print("\n[3.6] Features scaled with StandardScaler ✓")
 print(f"  Mean (first feature after scaling): {X_train_scaled[:, 0].mean():.4f}")
 print(f"  Std  (first feature after scaling): {X_train_scaled[:, 0].std():.4f}")
 
-
-# ============================================================
-# SECTION 4: EXPLORATORY DATA ANALYSIS (EDA)
-# ============================================================
 
 print("\n" + "=" * 60)
 print("  SECTION 4: EXPLORATORY DATA ANALYSIS")
@@ -324,10 +286,6 @@ print(f"  • Avg late payments  — Low Risk: {df[df.risk_label==0].late_paymen
 print(f"  • Avg balance        — Low Risk: R{df[df.risk_label==0].outstanding_balance.mean():,.0f} | High Risk: R{df[df.risk_label==1].outstanding_balance.mean():,.0f}")
 print(f"  • Avg monthly income — Low Risk: R{df[df.risk_label==0].monthly_income.mean():,.0f} | High Risk: R{df[df.risk_label==1].monthly_income.mean():,.0f}")
 
-
-# ============================================================
-# SECTION 5: MODEL BUILDING & TRAINING
-# ============================================================
 
 print("\n" + "=" * 60)
 print("  SECTION 5: MODEL BUILDING & TRAINING")
@@ -432,11 +390,6 @@ xgb_log, xgb_model = train_and_log(
 )
 training_logs['xgboost'] = xgb_log
 
-
-# ============================================================
-# SECTION 6: MODEL EVALUATION & VISUALISATION
-# ============================================================
-
 print("\n" + "=" * 60)
 print("  SECTION 6: MODEL EVALUATION")
 print("=" * 60)
@@ -511,12 +464,7 @@ ax.grid(axis='y', alpha=0.3)
 plt.tight_layout()
 plt.savefig('model_comparison.png', dpi=150, bbox_inches='tight')
 plt.show()
-print("✓ Model comparison chart saved → model_comparison.png")
-
-
-# ============================================================
-# SECTION 7: FEATURE IMPORTANCE
-# ============================================================
+print("Model comparison chart saved → model_comparison.png")
 
 print("\n" + "=" * 60)
 print("  SECTION 7: FEATURE IMPORTANCE")
@@ -546,7 +494,7 @@ for i, v in enumerate(xgb_imp):
 plt.tight_layout()
 plt.savefig('feature_importance.png', dpi=150, bbox_inches='tight')
 plt.show()
-print("✓ Feature importance chart saved → feature_importance.png")
+print(" Feature importance chart saved → feature_importance.png")
 
 print("\n[TOP 3 FEATURES — Random Forest]")
 for feat, imp in rf_imp.sort_values(ascending=False).head(3).items():
@@ -557,9 +505,6 @@ for feat, imp in xgb_imp.sort_values(ascending=False).head(3).items():
     print(f"  • {feat}: {imp:.4f}")
 
 
-# ============================================================
-# SECTION 8: HYPERPARAMETER TUNING & CROSS-VALIDATION
-# ============================================================
 
 print("\n" + "=" * 60)
 print("  SECTION 8: HYPERPARAMETER TUNING")
@@ -616,10 +561,6 @@ training_logs['xgboost_tuned'] = {
 }
 
 
-# ============================================================
-# SECTION 9: SAVE TRAINING LOGS & MODELS
-# ============================================================
-
 print("\n" + "=" * 60)
 print("  SECTION 9: SAVING MODELS & LOGS")
 print("=" * 60)
@@ -652,9 +593,6 @@ print("   sams_le_accommodation.pkl")
 print("   sams_le_trend.pkl")
 
 
-# ============================================================
-# SECTION 10: PREDICTION FUNCTION (FOR DEPLOYMENT)
-# ============================================================
 
 print("\n" + "=" * 60)
 print("  SECTION 10: PREDICTION FUNCTION")
@@ -747,7 +685,7 @@ print(f"  Confidence    : {result['confidence']:.1%}")
 print(f"  Risk Factors  : {', '.join(result['risk_factors'])}")
 
 print("\n" + "=" * 60)
-print("  ✅ SAMS ML PIPELINE COMPLETE")
+print("   SAMS ML PIPELINE COMPLETE")
 print("=" * 60)
 print("""
 Files generated:
