@@ -25,10 +25,37 @@ sams_ml/
 ├── requirements.txt
 └── README.md
 ```
+## Data augumentation, Preprocessing &  Exploratory Data Analysis(EDA)
+
+Because no real student payment records were available, the SAMS dataset was constructed entirely through synthetic data generation, which serves the same purpose as data augmentation: ensuring the model has enough varied, representative examples to learn from. A total of 1,000 student records were generated using NumPy's random number generator, seeded at 42 for full reproducibility. 
+
+Once the dataset was generated, preprocessing was applied in three sequential stages before any model saw the data. The first stage addressed the two categorical features, accommodation_type and payment_trend, which contained string values that machine learning algorithms cannot process arithmetically.
+
+Exploratory data analysis was conducted on the encoded dataset before model training, with the goal of validating that the synthetic features contained genuine predictive signal and of identifying the most informative patterns for domain understanding
+
+### EDA correlation
+
+<img width="1430" height="1174" alt="eda_correlation" src="https://github.com/user-attachments/assets/b10a0ad0-f155-47f0-a032-6a10febc8ba2" />
+
+### EDA distributions
+
+<img width="2673" height="1471" alt="eda_distributions" src="https://github.com/user-attachments/assets/657a9f0f-c327-4ce5-8495-728a3e623ee9" />
+
+### Feature importance
+
+<img width="2373" height="882" alt="feature_importance" src="https://github.com/user-attachments/assets/0caf92fa-2fa1-436e-a361-c3b5f6188570" />
+
+### Model Training
+Three supervised classification models were trained on the preprocessed SAMS dataset: Logistic Regression, Random Forest, and XGBoost. Logistic Regression served as the baseline linear model and used class_weight='balanced' to address class imbalance. Random Forest, configured with 200 trees and max_depth=8, reduced variance through bagging and provided feature importance scores. XGBoost, the primary model, used gradient boosting with scale_pos_weight to improve minority class prediction. Hyperparameter tuning was performed using GridSearchCV with 3-fold cross-validation and F1-score optimisation. The best-tuned XGBoost model was saved and integrated into the Flask API. Model performance metrics, including accuracy, precision, recall, F1-score, ROC-AUC, training time, and cross-validation scores, were logged in a structured JSON file for reproducibilit
+
+### Evaluation
+
+Model performance was evaluated using accuracy, precision, recall, F1-score, and ROC-AUC to provide a balanced assessment of binary risk prediction. Accuracy alone was insufficient due to class imbalance, while precision and recall measured the model’s ability to correctly identify high-risk students and minimise missed cases. The F1-score was treated as the main evaluation metric, and ROC-AUC measured overall classification ability across thresholds. Logistic Regression achieved about 80% accuracy and 0.85 ROC-AUC, serving as a strong linear baseline. Random Forest improved performance to approximately 87% accuracy and 0.93 ROC-AUC by capturing non-linear relationships. The tuned XGBoost model achieved the best overall results, with around 91% accuracy, F1-score near 0.90, and ROC-AUC of 0.96. Cross-validation showed stable performance with low variation, confirming good generalisation. Feature importance analysis identified late payments, outstanding balance, and monthly income as the strongest predictors across both ensemble models.
+
+
 ## Results and Visualizations
 
 ### Model Performance Comparison
-
 
 <img width="1923" height="873" alt="model_comparison" src="https://github.com/user-attachments/assets/a43f07b3-df2c-4025-a721-24a8f5dc7ae2" />
 
