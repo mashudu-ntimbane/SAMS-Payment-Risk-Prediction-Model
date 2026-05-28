@@ -4,6 +4,19 @@ Supervised ML system that predicts whether a student will delay or default on ac
 
 ---
 
+# Payment Risk Machine Learning Model
+## Overview
+1.  **Open the Model:**
+<img width="942" height="432" alt="Capture" src="https://github.com/user-attachments/assets/953a0fc9-98bc-4314-87e0-67e113b01e79" />
+
+2.  **Choose the required payment information:** Provide the required input data.
+ <img width="940" height="427" alt="Capture2" src="https://github.com/user-attachments/assets/abf03cbe-1b6d-4a97-98d9-8bab040aa02a" />
+
+5.  **Access payment risk:** Click the final run/submit button. 
+<img width="944" height="428" alt="Capture3" src="https://github.com/user-attachments/assets/1c04e8bb-2f77-4493-9704-e108a745b996" />
+<img width="931" height="431" alt="Captur4" src="https://github.com/user-attachments/assets/bc5e99c7-2f17-4795-8cd4-9da4d7bd43d4" />
+<img width="944" height="431" alt="Capture4" src="https://github.com/user-attachments/assets/8a29a82d-50d9-4cf5-b03b-bdaee8b40c33" />
+
 ## 📁 Project Structure
 
 ```
@@ -69,33 +82,7 @@ Model performance was evaluated using accuracy, precision, recall, F1-score, and
 ### Confusion Matrix 
 <img width="2486" height="735" alt="confusion_matrices" src="https://github.com/user-attachments/assets/4417b0ec-870b-4890-a782-5f5c6bd99f78" />
 
-### Exploratory Data Analysis(EDA) correlation
-
-<img width="1430" height="1174" alt="eda_correlation" src="https://github.com/user-attachments/assets/b10a0ad0-f155-47f0-a032-6a10febc8ba2" />
-
-### Exploratory Data Analysis(EDA) distributions
-
-<img width="2673" height="1471" alt="eda_distributions" src="https://github.com/user-attachments/assets/657a9f0f-c327-4ce5-8495-728a3e623ee9" />
-
-### Feature importance
-
-<img width="2373" height="882" alt="feature_importance" src="https://github.com/user-attachments/assets/0caf92fa-2fa1-436e-a361-c3b5f6188570" />
-
-
 ---
-
-# Payment Risk Machine Learning Model
-## Overview
-1.  **Open the Model:**
-<img width="942" height="432" alt="Capture" src="https://github.com/user-attachments/assets/953a0fc9-98bc-4314-87e0-67e113b01e79" />
-
-2.  **Choose the required payment information:** Provide the required input data.
- <img width="940" height="427" alt="Capture2" src="https://github.com/user-attachments/assets/abf03cbe-1b6d-4a97-98d9-8bab040aa02a" />
-
-5.  **Access payment risk:** Click the final run/submit button. 
-<img width="944" height="428" alt="Capture3" src="https://github.com/user-attachments/assets/1c04e8bb-2f77-4493-9704-e108a745b996" />
-<img width="931" height="431" alt="Captur4" src="https://github.com/user-attachments/assets/bc5e99c7-2f17-4795-8cd4-9da4d7bd43d4" />
-<img width="944" height="431" alt="Capture4" src="https://github.com/user-attachments/assets/8a29a82d-50d9-4cf5-b03b-bdaee8b40c33" />
 
 ## 🔌 API Reference
 
