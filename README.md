@@ -59,11 +59,19 @@ Exploratory data analysis was conducted on the encoded dataset before model trai
 <img width="2373" height="882" alt="feature_importance" src="https://github.com/user-attachments/assets/0caf92fa-2fa1-436e-a361-c3b5f6188570" />
 
 ### Model Training
-Three supervised classification models were trained on the preprocessed SAMS dataset: Logistic Regression, Random Forest, and XGBoost. Logistic Regression served as the baseline linear model and used class_weight='balanced' to address class imbalance. Random Forest, configured with 200 trees and max_depth=8, reduced variance through bagging and provided feature importance scores. XGBoost, the primary model, used gradient boosting with scale_pos_weight to improve minority class prediction. Hyperparameter tuning was performed using GridSearchCV with 3-fold cross-validation and F1-score optimisation. The best-tuned XGBoost model was saved and integrated into the Flask API. Model performance metrics, including accuracy, precision, recall, F1-score, ROC-AUC, training time, and cross-validation scores, were logged in a structured JSON file for reproducibilit
+Three supervised classification models were trained on the preprocessed SAMS dataset: Logistic Regression, Random Forest, and XGBoost. Logistic Regression served as the baseline linear model and used class_weight='balanced' to address class imbalance. 
+
+Random Forest, configured with 200 trees and max_depth=8, reduced variance through bagging and provided feature importance scores. XGBoost, the primary model, used gradient boosting with scale_pos_weight to improve minority class prediction. Hyperparameter tuning was performed using GridSearchCV with 3-fold cross-validation and F1-score optimisation. The best-tuned XGBoost model was saved and integrated into the Flask API. 
+
+Model performance metrics, including accuracy, precision, recall, F1-score, ROC-AUC, training time, and cross-validation scores, were logged in a structured JSON file for reproducibilit
 
 ### Evaluation
 
-Model performance was evaluated using accuracy, precision, recall, F1-score, and ROC-AUC to provide a balanced assessment of binary risk prediction. Accuracy alone was insufficient due to class imbalance, while precision and recall measured the model’s ability to correctly identify high-risk students and minimise missed cases. The F1-score was treated as the main evaluation metric, and ROC-AUC measured overall classification ability across thresholds. Logistic Regression achieved about 80% accuracy and 0.85 ROC-AUC, serving as a strong linear baseline. Random Forest improved performance to approximately 87% accuracy and 0.93 ROC-AUC by capturing non-linear relationships. The tuned XGBoost model achieved the best overall results, with around 91% accuracy, F1-score near 0.90, and ROC-AUC of 0.96. Cross-validation showed stable performance with low variation, confirming good generalisation. Feature importance analysis identified late payments, outstanding balance, and monthly income as the strongest predictors across both ensemble models.
+Model performance was evaluated using accuracy, precision, recall, F1-score, and ROC-AUC to provide a balanced assessment of binary risk prediction. Accuracy alone was insufficient due to class imbalance, while precision and recall measured the model’s ability to correctly identify high-risk students and minimise missed cases.
+
+The F1-score was treated as the main evaluation metric, and ROC-AUC measured overall classification ability across thresholds. Logistic Regression achieved about 80% accuracy and 0.85 ROC-AUC, serving as a strong linear baseline. 
+
+Random Forest improved performance to approximately 87% accuracy and 0.93 ROC-AUC by capturing non-linear relationships. The tuned XGBoost model achieved the best overall results, with around 91% accuracy, F1-score near 0.90, and ROC-AUC of 0.96. Cross-validation showed stable performance with low variation, confirming good generalisation. Feature importance analysis identified late payments, outstanding balance, and monthly income as the strongest predictors across both ensemble models.
 
 
 ## Results and Visualizations
