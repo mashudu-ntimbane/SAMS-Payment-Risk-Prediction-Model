@@ -1,5 +1,5 @@
 
-# SAMS — Payment Risk Prediction Model
+# Student Accommodation Management System (SAMS) — Payment Risk Prediction Model
 Supervised ML system that predicts whether a student will delay or default on accommodation payments. Built with Python, scikit-learn, and XGBoost. Deployable via Flask REST API.
 
 ---
